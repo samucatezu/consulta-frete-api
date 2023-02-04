@@ -1,0 +1,13 @@
+package com.samucatezu.consultafreteapi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ConsultaFreteApiApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ConsultaFreteApiApplication.class, args);
+    }
+
+}
