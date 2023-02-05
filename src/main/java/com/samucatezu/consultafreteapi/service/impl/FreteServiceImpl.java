@@ -6,6 +6,7 @@ import com.samucatezu.consultafreteapi.request.FreteRequest;
 import com.samucatezu.consultafreteapi.response.FreteResponse;
 import com.samucatezu.consultafreteapi.service.FreteService;
 import com.samucatezu.consultafreteapi.utils.ViaCepClient;
+import com.samucatezu.consultafreteapi.validation.exception.CepIncorretoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class FreteServiceImpl implements FreteService {
 
         ViaCepDto viaCepDto = service.buscaCep(freteRequest.getCep());
         if(viaCepDto == null) {
-            throw new Exception("Erro ao consultar via cep");
+            throw new CepIncorretoException("Erro ao consultar via cep");
         }
         FreteResponse freteResponse = FreteResponse.builder()
                 .cep(viaCepDto.getCep())
