@@ -31,9 +31,9 @@ public class FreteModelTest {
     private FreteService service;
 
     @Test
-    public void consultaComCepValido(){
+    public void consultaComCepValido() {
         FreteRequest freteRequest = new FreteRequest();
-        freteRequest.setCep("06454000");
+        freteRequest.setCep("06454-000");
 
         String resposta = service.executa(freteRequest);
 
@@ -50,7 +50,7 @@ public class FreteModelTest {
     }
 
     @Test
-    public void consultaComCepValido2(){
+    public void consultaComCepValido2() {
         FreteRequest freteRequest = new FreteRequest();
         freteRequest.setCep("04711-035");
 
@@ -67,8 +67,10 @@ public class FreteModelTest {
 
         assertEquals(resposta, freteModel.toString());
     }
+
     private void assertThrows(Executable executable) {
     }
+
     @Test
     public void consultaComCepInexistente() {
 
@@ -81,7 +83,6 @@ public class FreteModelTest {
             }
         });
     }
-
 
 
     @Test

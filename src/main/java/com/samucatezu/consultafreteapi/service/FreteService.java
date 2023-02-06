@@ -15,12 +15,11 @@ import org.springframework.web.client.RestTemplate;
 public class FreteService {
 
     public String executa(FreteRequest request) {
-        try{
+        try {
 
             FreteResponse freteResponse = new RestTemplate().getForEntity("https://viacep.com.br/ws/" + request.getCep() + "/json/", FreteResponse.class).getBody();
 
             if (freteResponse != null && freteResponse.isErro()) {
-//                return "CEP não encontrado, por favor repetir a consulta com dados válidos.";
                 throw new ErroCepException("CEP inexistente, por favor repetir a consulta com dados válidos.");
             }
 
@@ -33,6 +32,7 @@ public class FreteService {
         }
 
     }
+
     public String valorFrete(String uf) {
         return EstadosEnum.find(uf);
     }
