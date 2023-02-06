@@ -1,6 +1,6 @@
 package com.samucatezu.consultafreteapi.validation.handler;
 
-import com.samucatezu.consultafreteapi.validation.exception.CepIncorretoException;
+import com.samucatezu.consultafreteapi.validation.exception.CepInexistenteException;
 import com.samucatezu.consultafreteapi.validation.exception.ExceptionReponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
         return new ResponseEntity<>(exceptionReponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(CepIncorretoException.class)
+    @ExceptionHandler(CepInexistenteException.class)
     public final ResponseEntity<ExceptionReponse> handleBadRequestException(Exception ex, WebRequest request) {
         ExceptionReponse exceptionReponse = new ExceptionReponse(new Date(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(exceptionReponse, HttpStatus.BAD_REQUEST);
