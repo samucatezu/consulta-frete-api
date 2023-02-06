@@ -1,27 +1,23 @@
 package com.samucatezu.consultafreteapi.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+@AllArgsConstructor
 @Getter
 @Setter
-@Builder
 public class FreteResponse {
 
-    private String cep;
-    @JsonProperty("estado")
-    private String uf;
-    private String ddd;
-    @JsonProperty("rua")
-    private String logradouro;
-    private String bairro;
-    private String complemento;
-    @JsonProperty("cidade")
-    private String localidade;
-    @JsonProperty("frete")
-    private String valorFrete;
+    public FreteResponse() {
+    }
 
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private boolean erro;
 
 }
