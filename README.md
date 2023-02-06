@@ -28,4 +28,4 @@ para o cliente.
 - GitHub: [samucatezu](https://github.com/samucatezu)
 - LinkedIn: [linkedin](https://www.linkedin.com/in/adrianovs87/)
 - Certificações: [Credly](https://www.credly.com/users/samucatezu/badges)
-- Certificações: [GCP](https://www.cloudskillsboost.google/public_profiles/44856a40-3c42-4e6d-bad1-094a43e0f97c)
+- Badges: [GCP](https://www.cloudskillsboost.google/public_profiles/44856a40-3c42-4e6d-bad1-094a43e0f97c)
