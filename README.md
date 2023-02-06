@@ -7,6 +7,7 @@ API REST de consulta de endereço e cálculo de frete para um determinado CEP.
 - Documentação Swagger
 - Testes unitários JUnit5
 - Testes automatizados utilizando cucumber(WIP)
+- Elastic Beanstalk e S3(AWS)
 
 ## Sobnre o autor
 - GitHub: [samucatezu](https://github.com/samucatezu)
